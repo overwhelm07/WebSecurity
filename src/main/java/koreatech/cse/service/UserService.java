@@ -112,4 +112,11 @@ public class UserService implements UserDetailsService {
         return "redirect:/";
     }
 
+    public int countUsers() {
+        return userMapper.count();
+    }
+    public int countAuthoritiesRoleUser() {
+        return authorityMapper.countAuthoritiesRoleUser();
+    }
+
 }

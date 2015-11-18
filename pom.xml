@@ -143,6 +143,44 @@
             <artifactId>jackson-databind</artifactId>
             <version>2.6.2</version>
         </dependency>
+
+        <!-- Spring Test -->
+        <!-- Spring Test -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>${spring-security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-websocket</artifactId>
+            <version>7.0.62</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-websocket</artifactId>
+            <version>7.0.62</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <profiles>
@@ -172,6 +210,14 @@
                 <directory>src/main/resources/${env}</directory>
             </resource>
         </resources>
+        <testResources>
+            <testResource>
+                <directory>src/main/resources/common</directory>
+            </testResource>
+            <testResource>
+                <directory>src/main/resources/dev</directory>
+            </testResource>
+        </testResources>
     </build>
 </project>
 
